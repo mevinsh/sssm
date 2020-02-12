@@ -49,6 +49,8 @@ Trade is immutable
 8. List all trades in last n minutes	GET 	/trade/list?timeInMinutes=
 9. Calcuate VolumeWeightedStockPrice 	GET		/trade/VolumeWeightedStockPrice/{timeinMinutes}
 10. Calculate GBCEShareIndex			GET 	/trade/GBCEShareIndex
+11. Record Trade BUY                    POST    /trade/BUY/{symbol}?price={}&quantity={} 
+12. Record Trade SELL                   POST    /trade/SELL/{symbol}?price={}&quantity={} 
 
 
 The entire application is designed as primarly 3 layers
