@@ -10,6 +10,9 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
+/**
+ * Test repository to store stocks
+ */
 @Repository
 public class InMemStockRepository implements InMemRepository<Stock,String> {
 

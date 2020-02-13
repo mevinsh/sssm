@@ -1,14 +1,18 @@
 package io.shubansoft.sssm.service.calcs;
 
-import io.shubansoft.sssm.model.Stock;
 import io.shubansoft.sssm.model.StockValue;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.inject.Inject;
-import java.util.function.BiFunction;
 import java.util.function.Function;
 
+/**
+ * Service to calculate PERatio of stock at a given price
+ *
+ */
 @Service
+@Slf4j
 public class PERatio implements Function<StockValue,Double> {
 
     private final DividendYield dividendYield;
@@ -20,6 +24,8 @@ public class PERatio implements Function<StockValue,Double> {
 
     @Override
     public Double apply(final StockValue stockValue) {
+        log.debug(String.format("Calculating PERatio " +
+                " for [%s] at price [%s]", stockValue.getStock().getSymbol(), stockValue.getPrice()));
         return stockValue.getPrice() / dividendYield.apply(stockValue);
     }
 }

@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+/**
+ * Rules for validating StockType for a Stock
+ */
 @Component
 @Slf4j
 public class ValidStockTypeValidator implements ConstraintValidator<ValidStockType,String> {

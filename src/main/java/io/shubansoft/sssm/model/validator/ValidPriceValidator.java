@@ -6,6 +6,9 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 import java.math.BigDecimal;
 
+/**
+ * Rules for validating StockPrice input for a Stock
+ */
 @Component
 public class ValidPriceValidator implements ConstraintValidator<ValidPrice,Number> {
 

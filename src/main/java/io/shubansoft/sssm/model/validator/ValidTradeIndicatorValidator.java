@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+/**
+ * Rules for validating Trade indicator for a Trade
+ */
 @Component
 @Slf4j
 public class ValidTradeIndicatorValidator implements ConstraintValidator<ValidTradeIndicator,String> {

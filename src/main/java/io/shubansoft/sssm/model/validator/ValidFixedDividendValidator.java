@@ -7,6 +7,9 @@ import org.springframework.stereotype.Component;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+/**
+ * Rules for validating FixedDividend for a Stock
+ */
 @Component
 public class ValidFixedDividendValidator implements ConstraintValidator<ValidFixedDividend,Object> {
 

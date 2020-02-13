@@ -15,6 +15,10 @@ import java.util.stream.StreamSupport;
 import static io.shubansoft.sssm.model.Indicator.BUY;
 import static io.shubansoft.sssm.model.Indicator.SELL;
 
+
+/**
+ * Test repository to store trades
+ */
 @Repository
 public class InMemTradeRepository implements InMemRepository<Trade, String> {
 

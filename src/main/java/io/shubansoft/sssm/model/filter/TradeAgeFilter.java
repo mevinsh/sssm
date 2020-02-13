@@ -8,6 +8,9 @@ import java.time.LocalDateTime;
 import java.time.ZoneOffset;
 import java.util.function.Predicate;
 
+/**
+ * Filter to match Trades which are recorded within specified time in Minutes
+ */
 @Slf4j
 public class TradeAgeFilter implements Predicate<Trade> {
     private final long requiredTimeInMinutes;

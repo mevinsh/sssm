@@ -5,6 +5,9 @@ import org.springframework.stereotype.Component;
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
+/**
+ * Rules for validating LastDividend for a Stock
+ */
 @Component
 public class ValidLastDividendValidator  implements ConstraintValidator<ValidLastDividend,Double> {
 

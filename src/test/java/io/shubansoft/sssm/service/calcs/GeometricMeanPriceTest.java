@@ -9,6 +9,7 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static io.shubansoft.sssm.dao.InMemStockRepository.initStocks;
@@ -53,6 +54,12 @@ class GeometricMeanPriceTest {
         }
         final BigDecimal bd = BigDecimal.valueOf(gmp.apply(stockValues)).setScale(3,RoundingMode.HALF_UP);
         assertEquals(282.874,bd.doubleValue());
+    }
+
+    @Test
+    public void verify_GM_price3(){
+        final BigDecimal bd = BigDecimal.valueOf(gmp.apply(Collections.emptyList())).setScale(3,RoundingMode.HALF_UP);
+        assertEquals(25.000,bd.doubleValue());
     }
 
 }
